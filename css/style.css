@@ -1,0 +1,73 @@
+/*overall styles*/
+html{
+
+}
+
+body{
+
+}
+
+section{
+  padding: 32px 0px 32px 24px;
+}
+
+
+/*header*/
+header{
+  height: 64px;
+  padding: 0 24px;
+  line-height: 64px;
+  background-color: white;
+}
+
+header img{
+  height: 32px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+nav{
+  float: right;
+}
+
+nav a{
+  padding-left: 16px;
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/*banner*/
+#banner{
+  background-color: rgba(135,143,153,.5)
+}
+
+
+
+/*info section*/
+#info{
+  background-color: white;
+}
+
+#courses{
+  background-color: rgba(135,143,153,.3)
+}
+
+#exhibit{
+  background-color: white;
+}
+
+
+/*footer*/
+footer{
+  padding: 16px 24px 0 16px;
+  border-top: 1px;
+  border-style: solid;
+  border-color: rgba(135,143,153,.3);
+  background-color: white;
+}
+
+footer .legal{
+  float: right;
+  padding-left: 16px;
+}
