@@ -90,9 +90,12 @@ section{
 /*header*/
 header{
   height: 64px;
+  width: calc(100% - 48px);
   padding: 0 24px;
   line-height: 64px;
   background-color: white;
+  position: fixed;
+  z-index: 10;
 }
 
 header img{
@@ -115,6 +118,11 @@ nav a{
   display: none;
 }
 
+section, footer{
+  position: relative;
+  top: 64px;
+}
+
 @media only screen and (max-width: 500px){
   .desktop{
     display: none;
@@ -130,27 +138,13 @@ nav a{
 #banner{
   background-color: rgba(135,143,153,.5);
   display:flex;
-}
-
-@media only screen and (max-width: 500px){
-  #banner{
-    display: block;
-  }
+  position: relative;
 }
 
 #banner img{
   margin-right: 24px;
   width: 60%;
 }
-
-@media only screen and (max-width: 500px){
-  #banner img{
-    margin-right: 0px;
-    width: 100%;
-  }
-}
-
-
 
 #banner h1{
   font-size: 4rem;
@@ -181,6 +175,36 @@ nav a{
   width: 30%;
 }
 
+@media only screen and (max-width: 500px){
+  #banner{
+    display: block;
+    text-align: center;
+  }
+
+  #banner img{
+    margin-right: 0px;
+    width: 100%;
+  }
+
+  #banner_call_to_action{
+    width: 100%;
+  }
+
+  #banner h1{
+    font-size: 2rem;
+    line-height: normal;
+    padding: 32px 16px;
+  }
+
+  #banner p{
+    line-height: normal;
+    margin: 0 16px 24px 16px;
+  }
+
+  #banner #button{
+    margin-bottom: 32px;
+  }
+}
 
 /*info section*/
 #info{
@@ -228,6 +252,45 @@ nav a{
 #sacks{
   background-color: rgba(135,143,153,.5);
 }
+
+@media only screen and (max-width: 500px){
+  .info{
+    flex-direction: column;
+  }
+
+  #info .right_column img{
+    width: calc(100% - 32px);
+    height: auto;
+    padding-right: 16px;
+  }
+
+  #info .info{
+    border-style: none;
+    padding-bottom: 48px;
+  }
+
+  #info{
+    padding-bottom: 32px;
+    border-width: 1px;
+    border-bottom: solid;
+    border-color: rgba(135,143,153,.3)
+  }
+
+  #sacks{
+    background-color: white;
+  }
+
+  #info #sacks{
+    padding-bottom: 0;
+  }
+
+  #info .right_column .details{
+    padding-left: 32px;
+  }
+}
+
+
+
 
 /*courses section*/
 
@@ -289,6 +352,7 @@ display: flex;
 @media only screen and (max-width: 500px){
   #courses{
     background-color: white;
+    padding: 32px 16px;
   }
 
   #courses .row{
@@ -297,6 +361,20 @@ display: flex;
 
   .course_mobile{
     display: block;
+  }
+
+  #courses h1{
+    margin-bottom: 16px;
+  }
+
+  .course_mobile h2{
+    padding: 16px 0px 24px 16px;
+    margin-bottom: 8px;
+    background-color: rgba(135,143,153,.3);
+  }
+
+  .course_mobile #last_subject{
+    margin-bottom: 0px;
   }
 }
 
@@ -331,6 +409,10 @@ video{
   margin-bottom: 8px;
 }
 
+.exhibit_mobile{
+  display: none;
+}
+
 
 #th1{
   background-color: rgba(135,143,153,.5);
@@ -340,13 +422,35 @@ video{
   #exhibit .right_column, #exhibit h2, #exhibit p{
     display: none;
   }
+
+  #exhibit{
+    border-top: 1px;
+    border-style: solid;
+    border-color: rgba(135,143,153,.3);
+  }
+
+  #exhibit .left_column {
+    width: 100%;
+    padding-right: 0;
+    padding-bottom: 24px;
+  }
+
+  .exhibit_mobile{
+    display: block;
+    padding-top: 32px;
+    margin-bottom: 16px
+  }
+
+  .exhibit_desktop{
+    display: none;
+  }
 }
 
 
 
 /*footer*/
 footer{
-  padding: 16px 24px 0 16px;
+  padding: 16px 24px;
   border-top: 1px;
   border-style: solid;
   border-color: rgba(135,143,153,.3);
